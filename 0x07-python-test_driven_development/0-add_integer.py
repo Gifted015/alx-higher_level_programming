@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 
 def add_integer(a, b=98):
-    '''A function that adds 2 integers'''
+    """
+    >>> add_integer(1, 2)
+    3
+    >>> print(add_integer(100, -2))
+    98
+    """
     try:
         a = int(a)
     except (TypeError, ValueError):
