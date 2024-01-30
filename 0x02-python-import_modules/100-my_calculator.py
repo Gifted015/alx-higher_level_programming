@@ -26,3 +26,4 @@ if __name__ == "__main__":
                 break
 
         print("{} {} {} = {}".format(a, arg[1], b, c))
+hi
