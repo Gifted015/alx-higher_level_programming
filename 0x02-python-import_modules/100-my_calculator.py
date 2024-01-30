@@ -18,7 +18,7 @@ if __name__ == "__main__":
     else:
         a = int(arg[0])
         b = int(arg[2])
-        comd = [add(a,b), sub(a, b), mul(a, b), div(a, b)]
+        comd = [add(a, b), sub(a, b), mul(a, b), div(a, b)]
 
         for i in range(0, 4):
             if (arg[1] == op[i]):
@@ -26,4 +26,3 @@ if __name__ == "__main__":
                 break
 
         print("{} {} {} = {}".format(a, arg[1], b, c))
-            
