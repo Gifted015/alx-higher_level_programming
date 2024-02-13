@@ -6,7 +6,7 @@ def no_c(my_string):
     while (i < str_len):
         if (str_list[i] == 'c' or str_list[i] == 'C'):
             str_list.pop(i)
-            str_len -= 1
+#            str_len -= 1
         i += 1
     new_str = "".join(str_list)
     return (new_str)
