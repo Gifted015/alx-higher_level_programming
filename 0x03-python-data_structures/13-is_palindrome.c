@@ -9,21 +9,15 @@
  */
 int is_palindrome(listint_t **head)
 {
-  listint_t *run, *temp = *head;
+  listint_t *temp = *head;
   int i, j, len = 0;
+  int list[1000];
 
   if (temp == NULL)
     return (1);
 
   else
     {
-      run = *head; 
-      while (run != NULL)
-	{
-	  run = run->next;
-	  len++;
-	}
-      int list[len];
       i = 0;
       while (temp != NULL)
 	{
@@ -37,9 +31,7 @@ int is_palindrome(listint_t **head)
 	  if (list[i] == list[j])
 	    continue;
 	  else
-	    {
-	      return (0);
-	    }
+	    return (0);
 	}
       return (1);
     }
