@@ -33,8 +33,10 @@ int is_palindrome(listint_t **head)
 	  if (list[i] == list[j])
 	    continue;
 	  else
-	    free(list);
-	    return (0);
+	    {
+	      free(list);
+	      return (0);
+	    }
 	}
       free(list);
       return (1);
