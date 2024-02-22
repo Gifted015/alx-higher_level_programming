@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
   listint_t *temp = *head;
   int i, j, len;
   int *list;
-  
+
   if (temp == NULL)
     return (1);
 
@@ -33,8 +33,10 @@ int is_palindrome(listint_t **head)
 	  if (list[i] == list[j])
 	    continue;
 	  else
-	    return 0;
+	    free(list);
+	    return (0);
 	}
-      return 1;
+      free(list);
+      return (1);
     }
 }
