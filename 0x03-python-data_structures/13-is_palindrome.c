@@ -34,10 +34,12 @@ int is_palindrome(listint_t **head)
 	    continue;
 	  else
 	    {
+	      free(list);
 	      free(temp);
 	      return (0);
 	    }
 	}
+      free(list);
       free(temp);
       return (1);
     }
