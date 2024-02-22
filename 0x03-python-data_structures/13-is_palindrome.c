@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -8,7 +10,7 @@
 int is_palindrome(listint_t **head)
 {
   listint_t *temp = *head;
-  int i, j;
+  int i, j, len;
   int *list;
   
   if (temp == NULL)
@@ -16,18 +18,18 @@ int is_palindrome(listint_t **head)
 
   else
     {
-      list = (int *)malloc(o);
+      list = (int *)malloc(0);
+      i = 0;
       while (temp != NULL)
 	{
-	  i = 0
 	  list = (int *)realloc(list, (i + 1) * sizeof(int));
 	  list[i] = (temp->n);
 	  temp = temp->next;
+	  i++;
 	}
-      len = len(list);
-      for (i = 0, i < len, i++)
+      len = i;
+      for (i = 0, j = len - 1; i < len; i++, j--)
 	{
-	  j = (i + 1) * -1;
 	  if (list[i] == list[j])
 	    continue;
 	  else
