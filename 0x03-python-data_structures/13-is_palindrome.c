@@ -9,20 +9,24 @@
  */
 int is_palindrome(listint_t **head)
 {
-  listint_t *temp = *head;
-  int i, j, len;
-  int *list;
+  listint_t *run, *temp = *head;
+  int i, j, len = 0;
 
   if (temp == NULL)
     return (1);
 
   else
     {
-      list = (int *)malloc(0);
+      run = *head; 
+      while (run != NULL)
+	{
+	  run = run->next;
+	  len++;
+	}
+      int list[len];
       i = 0;
       while (temp != NULL)
 	{
-	  list = (int *)realloc(list, (i + 1) * sizeof(int));
 	  list[i] = (temp->n);
 	  temp = temp->next;
 	  i++;
@@ -34,13 +38,9 @@ int is_palindrome(listint_t **head)
 	    continue;
 	  else
 	    {
-	      free(list);
-	      free(temp);
 	      return (0);
 	    }
 	}
-      free(list);
-      free(temp);
       return (1);
     }
 }
